@@ -12,7 +12,7 @@ const PORT = process.env.PORT
 app.use(express.json());
 app.use(express.json());
 app.use(cors({
-    origin: ["https://expense-tracker-one-ashen.vercel.app/"],
+    origin: [""],
     methods: ["POST","GET"],
     credentials: true
 }))

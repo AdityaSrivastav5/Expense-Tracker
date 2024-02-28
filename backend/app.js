@@ -10,7 +10,12 @@ const PORT = process.env.PORT
 
 //middlewares
 app.use(express.json());
-app.use(cors())
+app.use(express.json());
+app.use(cors({
+    origin: ["https://expense-tracker-one-ashen.vercel.app/"],
+    methods: ["POST","GET"],
+    credentials: true
+}))
 
 //routes
 readdirSync('./routes').map((route)=> app.use('/api/v1',require('./routes/'+ route)))

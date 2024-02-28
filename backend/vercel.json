@@ -1,6 +1,14 @@
-
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+  "version": 2,
+  "routes": [
+    { "src": "/add-income", "dest": "/controllers/income" },
+    { "src": "/get-incomes", "dest": "/controllers/income" },
+    { "src": "/delete-income/:id", "dest": "/controllers/income" },
+    { "src": "/add-expense", "dest": "/controllers/expense" },
+    { "src": "/get-expenses", "dest": "/controllers/expense" },
+    { "src": "/delete-expense/:id", "dest": "/controllers/expense" }
+  ],
+  "builds": [
+    { "src": "./controllers/**", "use": "@vercel/node" }
   ]
 }

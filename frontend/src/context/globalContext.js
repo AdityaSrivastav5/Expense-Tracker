@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react"
 import axios from 'axios'
 
 
-const BASE_URL = "http://localhost:3004/api/v1/";
+const BASE_URL = "expense-tracker-coral-chi.vercel.app/";
 
 
 const GlobalContext = React.createContext()
@@ -112,3 +112,5 @@ export const GlobalProvider = ({children}) => {
 export const useGlobalContext = () =>{
     return useContext(GlobalContext)
 }
+
+//http://localhost:3004/api/v1/

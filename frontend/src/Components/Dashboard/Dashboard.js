@@ -10,9 +10,12 @@ function Dashboard() {
     const {totalExpenses,incomes, expenses, totalIncome, totalBalance, getIncomes, getExpenses } = useGlobalContext()
 
     useEffect(() => {
-        getIncomes()
-        getExpenses()
-    }, [])
+    getIncomes();
+}, [getIncomes]);
+
+useEffect(() => {
+    getExpenses();
+}, [getExpenses]);
 
     return (
         <DashboardStyled>

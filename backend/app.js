@@ -8,8 +8,16 @@ require('dotenv').config()
 
 const PORT = process.env.PORT || 3004
 
+const corsConfig = {
+    origin : "*",
+    credential: true,
+    methods: ["GET","POST","DELETE","PUT"]
+
+};
+
 //middlewares
 app.use(express.json());
+app.options("",cors(corsConfig));
 app.use(cors());
 
 //routes
@@ -23,3 +31,5 @@ const server = () => {
 } 
 
 server()
+
+//mongodb+srv://adityasrivastav863:iamaditya05@cluster0.bqful37.mongodb.net/?retryWrites=true&w=majority

@@ -9,7 +9,7 @@ require('dotenv').config()
 const PORT = process.env.PORT || 3004
 
 const corsConfig = {
-    origin : "*",
+    origin : "expense-tracker-coral-chi.vercel.app",
     credential: true,
     methods: ["GET","POST","DELETE","PUT"]
 

@@ -13,4 +13,12 @@
             "methods": ["GET","POST","DELETE","PUT","OPTIONS"]
         }
     ]
+    {
+    "rewrites":[
+        { 
+            "source": "/(.*)",
+            "destination": "/index.html" 
+        }
+    ]
+    }
 }
